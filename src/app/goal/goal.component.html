@@ -1,0 +1,30 @@
+<section class="skewd-box">
+  <div class="container">
+   <div class="row">
+    <h1 class="col-md-12">My Goals</h1>
+    <div class="col-md-6">
+        <app-goal-form (addGoal)="addNewGoal($event)"></app-goal-form>
+    </div>
+    <div class="col-md-6">
+        <ul >
+            <div class="card bg-info " *ngFor='let goal of goals; let i = index' >
+             <li appStrikethrough>{{goal.name}}</li>
+             <p>{{goal.completeDate | date }}</p>
+             <button class="btn btn-primary col-4" (click)='toogleDetails(i)'>Toogle Details</button>
+             <app-goal-details *ngIf="goal.showDescription" [goal]='goal' (isComplete) = 'completeGoal($event , i)'></app-goal-details>
+             
+           
+            </div>
+           </ul>
+    </div>
+   </div>
+  </div>
+</section>
+ <p *ngIf="goals.length>5">You have too many Goals</p>
+
+
+
+
+
+
+ 

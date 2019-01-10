@@ -1,0 +1,21 @@
+li{
+    list-style: none;
+}
+/* .skewedBox{
+    padding: 100px 0;
+    background-color: #edff57;
+    transform: skew(0deg , -10deg) translateY(-10px);
+}
+.container{
+    padding: 150px 120px;
+    transform: skew(0deg , 10deg);
+    font-family: Arial, Helvetica, sans-serif;
+
+} */
+.Toogle{
+    background-color:rgba(0, 0, 0, .3);
+    border:none;
+}
+.card{
+    margin-bottom: 10px;
+}
